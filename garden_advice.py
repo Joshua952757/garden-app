@@ -5,24 +5,37 @@ plant_type = input("Please select the plant type (flower, vegetable, fruit: )")
 # Variable to hold gardening advice
 advice = ""
 
-# Determine advice based on the season
-if season == "summer":
-    advice += "Water your plants regularly and provide some shade.\n"
-elif season == "winter":
-    advice += "Protect your plants from frost with covers.\n"
-else:
-    advice += "No advice for this season.\n"
+# Change the code
+# Use git add .
+# Use git commit -m "message"
+# Push the new branch to GitHub (git push orign new_branch_name)
+# On GitHub in the browser create the pull request
+# Merge and close the pull request on GitHub including a keyword such as Fix... to automatically close the related issue
+# Check the "Issues" tab and ensure the issue is closed
 
-# Determine advice based on the plant type
-if plant_type == "flower":
-    advice += "Use fertiliser to encourage blooms."
-elif plant_type == "vegetable":
-    advice += "Keep an eye out for pests!"
-else:
-    advice += "No advice for this type of plant."
 
-# Print the generated advice
-print(advice)
+def get_gardening_advice(season, plant_type):
+    advice = ""
+
+    if season == "summer":
+        advice += "Water plants regularly and provide shade.\n"
+    elif season == "winter":
+        advice += "Protect plants from frost with covers.\n"
+    else:
+        advice += "No seasonal advice.\n"
+
+    if plant_type == "flower":
+        advice += "Use fertiliser for blooms."
+    elif plant_type == "vegetable":
+        advice += "Watch out for pests!"
+    else:
+        advice += "No plant type advice."    
+    return advice
+
+
+print(get_gardening_advice("summer", "flower"))
+print(get_gardening_advice("winter", "vegetable"))
+print(get_gardening_advice("spring", "tree"))
 
 # TODO: Examples of possible features to add:
 # - Add detailed comments explaining each block of code.
